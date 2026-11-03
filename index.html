@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="theme-color" content="#011024" />
+    <meta
+      name="description"
+      content="Hay momentos que se sueñan durante mucho tiempo y se guardan para siempre. Te invito a celebrar mis XV el 5 de diciembre. ¡Me encantaría que estés! ✨"
+    />
+    <link rel="canonical" href="https://bloomdate-lucia15.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bloomdate-lucia15.netlify.app/" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Mis XV · Lucía" />
+    <meta property="og:title" content="Mis XV · Lucía" />
+    <meta
+      property="og:description"
+      content="Hay momentos que se sueñan durante mucho tiempo y se guardan para siempre. Te invito a celebrar mis XV el 5 de diciembre. ¡Me encantaría que estés! ✨"
+    />
+    <meta property="og:image" content="https://bloomdate-lucia15.netlify.app/assets/whatsapp-lucia-xv.jpg" />
+    <meta property="og:image:secure_url" content="https://bloomdate-lucia15.netlify.app/assets/whatsapp-lucia-xv.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lucía, mis XV" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mis XV · Lucía" />
+    <meta name="twitter:description" content="Hay momentos que se sueñan durante mucho tiempo y se guardan para siempre. Te invito a celebrar mis XV el 5 de diciembre. ¡Me encantaría que estés! ✨" />
+    <meta name="twitter:image" content="https://bloomdate-lucia15.netlify.app/assets/whatsapp-lucia-xv.jpg" />
+    <title>Mis XV · Lucía</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap"
+    />
+    <link rel="preload" as="image" href="assets/portada.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=20261103-3" />
+  </head>
+  <body class="intro-is-open">
+    <div class="invitation-intro" role="dialog" aria-modal="true" aria-label="Bienvenida a los XV de Lucía">
+      <div class="intro-curtain intro-curtain--left" aria-hidden="true"></div>
+      <div class="intro-curtain intro-curtain--right" aria-hidden="true"></div>
+      <div class="invitation-intro__content">
+        <span class="invitation-intro__star" aria-hidden="true"></span>
+        <p class="invitation-intro__kicker">MIS XV</p>
+        <p class="invitation-intro__name">Lucía</p>
+        <span class="invitation-intro__line" aria-hidden="true"></span>
+        <p class="invitation-intro__question">¿Cómo querés entrar?</p>
+        <div class="invitation-intro__actions">
+          <button id="introWithMusic" class="intro-action" type="button"><span aria-hidden="true">♪</span> CON MÚSICA</button>
+          <button id="introWithoutMusic" class="intro-action intro-action--ghost" type="button">SIN MÚSICA</button>
+        </div>
+      </div>
+    </div>
+
+    <main id="invitationMain" class="invitation" tabindex="-1" aria-label="Invitación a los XV años de Lucía">
+      <section class="panel panel--cover" aria-labelledby="cover-title">
+        <h1 id="cover-title" class="sr-only">Mis XV, Lucía</h1>
+        <img src="assets/portada.webp" alt="Mis XV, Lucía" width="941" height="1672" fetchpriority="high" />
+      </section>
+
+      <section class="panel panel--guests" aria-labelledby="guests-title">
+        <h2 id="guests-title" class="sr-only">Esta invitación es para</h2>
+        <img src="assets/invitados.webp" alt="Esta invitación es para" width="1122" height="1402" loading="lazy" />
+        <p id="nombres-invitados" class="guest-name"></p>
+        <p id="cantidad-lugares" class="guest-places"></p>
+      </section>
+
+      <section class="panel panel--phrase" aria-labelledby="phrase-title">
+        <h2 id="phrase-title" class="sr-only">Unas palabras</h2>
+        <img
+          src="assets/frase.webp"
+          alt="Hay momentos que se sueñan durante mucho tiempo y se guardan para siempre. Me encantaría vivir esta noche rodeada de abrazos, risas, música y todos los recuerdos que vamos a crear juntos."
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="panel panel--countdown" aria-labelledby="countdown-title">
+        <h2 id="countdown-title" class="sr-only">Cuenta regresiva</h2>
+        <img src="assets/cuenta-regresiva.webp" alt="Faltan" width="941" height="1672" loading="lazy" />
+        <div class="countdown" role="timer" aria-live="off" aria-label="Tiempo restante para la fiesta">
+          <span id="days" class="countdown__value countdown__value--days">00</span>
+          <span id="hours" class="countdown__value countdown__value--hours">00</span>
+          <span id="minutes" class="countdown__value countdown__value--minutes">00</span>
+          <span id="seconds" class="countdown__value countdown__value--seconds">00</span>
+        </div>
+      </section>
+
+      <section class="panel panel--date" aria-labelledby="date-title">
+        <h2 id="date-title" class="sr-only">Fecha y hora</h2>
+        <img src="assets/fecha-hora.webp" alt="5 de diciembre, de 21:00 a 05:00 horas" width="941" height="1672" loading="lazy" />
+        <button id="calendarButton" class="hotspot hotspot--calendar" type="button">
+          <span class="sr-only">Agregar el evento al calendario</span>
+        </button>
+      </section>
+
+      <section class="panel panel--map" aria-labelledby="map-title">
+        <h2 id="map-title" class="sr-only">Cómo llegar</h2>
+        <img src="assets/como-llegar.webp" alt="Cómo llegar. Salón de eventos Los Chilcos" width="941" height="1671" loading="lazy" />
+        <a
+          class="hotspot hotspot--map"
+          href="https://maps.app.goo.gl/5jSjQqka2YHYR8T3A"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="sr-only">Ver ubicación en Google Maps</span>
+        </a>
+      </section>
+
+      <section class="panel panel--dress-code" aria-labelledby="dress-code-title">
+        <h2 id="dress-code-title" class="sr-only">Código de vestimenta</h2>
+        <img src="assets/dress-code.webp" alt="Dress code elegante sport" width="941" height="1670" loading="lazy" />
+      </section>
+
+      <section class="panel panel--gallery" aria-labelledby="gallery-title">
+        <div class="gallery__head">
+          <span class="gallery__divider" aria-hidden="true"></span>
+          <h2 id="gallery-title" class="gallery__title">Un poquito de mí</h2>
+          <span class="gallery__divider gallery__divider--small" aria-hidden="true"></span>
+        </div>
+        <div class="gallery__track" id="galleryTrack" tabindex="0" aria-label="Fotos de Lucía, deslizá para ver más">
+          <figure class="gallery__slide"><img src="assets/galeria-01.webp" alt="Lucía de bebé, riéndose con gorra" width="552" height="414" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-02.webp" alt="Lucía de chiquita, disfrazada" width="552" height="715" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-03.webp" alt="Lucía de nena, sonriendo con una trenza" width="297" height="528" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-04.webp" alt="Lucía sonriendo junto a una reja" width="825" height="1100" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-05.webp" alt="Lucía con adornos navideños y estrellitas en la cara" width="840" height="1100" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-06.webp" alt="Lucía en la playa, frente al mar" width="720" height="697" loading="lazy" style="object-position: 46% 50%" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-07.webp" alt="Lucía bailando" width="552" height="366" loading="lazy" style="object-position: 34% 50%" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-08.webp" alt="Lucía sentada en la arena al atardecer" width="823" height="1100" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-09.webp" alt="Lucía sentada junto al río" width="900" height="975" loading="lazy" style="object-position: 46% 50%" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-10.webp" alt="Lucía en la costanera" width="789" height="1100" loading="lazy" style="object-position: 62% 30%" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-11.webp" alt="Lucía sonriendo, en blanco y negro" width="835" height="1100" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/galeria-12.webp" alt="Lucía mirando el celular" width="900" height="1081" loading="lazy" /></figure>
+        </div>
+        <div class="gallery__dots" id="galleryDots" aria-hidden="true"></div>
+        <p class="gallery__hint">Deslizá para ver más</p>
+      </section>
+
+      <section class="panel panel--bloomkeep" aria-labelledby="bloomkeep-title">
+        <h2 id="bloomkeep-title" class="sr-only">BloomKeep</h2>
+        <img
+          src="assets/bloomkeep.webp"
+          alt="BloomKeep. Compartí tus fotos y guardá los recuerdos de esta noche"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <a class="hotspot hotspot--bloomkeep" href="https://app.bloomkeep.site/lucia-15" target="_blank" rel="noreferrer">
+          <span class="sr-only">Subir fotos a BloomKeep</span>
+        </a>
+      </section>
+
+      <section class="panel panel--music" aria-labelledby="music-title">
+        <h2 id="music-title" class="sr-only">Música</h2>
+        <img src="assets/musica.webp" alt="Música" width="941" height="1672" loading="lazy" />
+        <div class="disc" aria-hidden="true">
+          <div class="disc__sheen"><span></span></div>
+          <div class="disc__label"><span></span></div>
+        </div>
+        <p class="panel-copy panel-copy--music">¿CREAMOS UNA PLAYLIST JUNTOS?</p>
+        <a
+          class="hotspot hotspot--music"
+          href="https://open.spotify.com/playlist/2Pt8OIRCRQbsZqQlVdk7CG"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="hotspot__label">AGREGAR CANCIÓN</span>
+        </a>
+      </section>
+
+      <section class="panel panel--gifts" aria-labelledby="gifts-title">
+        <h2 id="gifts-title" class="sr-only">Regalos</h2>
+        <img
+          src="assets/regalos.webp"
+          alt="Regalos"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <p class="panel-copy panel-copy--gifts">
+          Tu presencia es lo más importante esta noche,<br />
+          pero si estás pensando en hacerme un regalo,<br />
+          te dejo mis datos
+        </p>
+        <button id="openGiftModal" class="hotspot hotspot--gifts" type="button">
+          <span class="sr-only">Ver datos para transferir</span>
+        </button>
+      </section>
+
+      <section class="panel panel--confirmation" aria-labelledby="confirmation-title">
+        <h2 id="confirmation-title" class="sr-only">Confirmación de asistencia</h2>
+        <img
+          src="assets/confirmacion.webp"
+          alt="¿Nos acompañás? Confirmá tu asistencia antes del 15/11"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <a
+          id="boton-confirmar"
+          class="hotspot hotspot--confirmation"
+          aria-label="Confirmar asistencia"
+          aria-disabled="true"
+        >
+          <span class="sr-only">Confirmar asistencia</span>
+        </a>
+      </section>
+
+      <footer class="panel panel--footer" aria-label="BloomDate y redes sociales">
+        <img
+          src="assets/footer-bloomdate.webp"
+          alt="Hecho con amor por BloomDate. WhatsApp, Instagram y sitio web"
+          width="2172"
+          height="724"
+          loading="lazy"
+        />
+        <a
+          class="footer-link footer-link--whatsapp"
+          href="https://wa.me/541140436324"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Contactar a BloomDate por WhatsApp"
+        ></a>
+        <a
+          class="footer-link footer-link--instagram"
+          href="https://www.instagram.com/bloomdate.invitaciones/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Ver BloomDate Invitaciones en Instagram"
+        ></a>
+        <a
+          class="footer-link footer-link--website"
+          href="https://bloomdate-site.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Visitar el sitio web de BloomDate"
+        ></a>
+      </footer>
+    </main>
+
+    <div class="date-gate" id="dateGate" hidden>
+      <img src="assets/fecha-hora.webp" alt="5 de diciembre, de 21:00 a 05:00 horas" width="941" height="1672" />
+      <canvas class="date-gate__canvas" id="revealCanvas" aria-label="Pasá el dedo para descubrir la fecha"></canvas>
+      <div class="magic-trail" id="magicTrail" aria-hidden="true"></div>
+      <div class="reveal-guide" aria-hidden="true">
+        <span class="reveal-guide__star"></span>
+        <strong>HAY UNA FECHA POR DESCUBRIR</strong>
+        <span>Pasá tu dedo sobre la pantalla</span>
+        <div class="finger-demo"><b>☝</b><i></i></div>
+      </div>
+      <button id="revealSkip" class="reveal-skip" type="button">REVELAR FECHA</button>
+    </div>
+
+    <dialog id="giftModal" class="gift-modal" aria-labelledby="gift-modal-title">
+      <div class="gift-modal__card">
+        <h3 id="gift-modal-title" class="sr-only">Regalos, datos para transferir</h3>
+        <img
+          src="assets/regalos-modal.webp"
+          alt="Alias lucia.351.curar.mp. Titular Lucia Villarroel"
+          width="941"
+          height="1672"
+        />
+        <button class="hotspot hotspot--gift-close" type="button" data-close-modal>
+          <span class="sr-only">Cerrar</span>
+        </button>
+        <button class="hotspot hotspot--gift-alias" type="button" data-copy="lucia.351.curar.mp" data-copy-message="Alias copiado">
+          <span class="sr-only">Copiar alias lucia.351.curar.mp</span>
+        </button>
+        <button class="hotspot hotspot--gift-copy" type="button" data-copy="lucia.351.curar.mp" data-copy-message="Alias copiado">
+          <span class="sr-only">Copiar alias</span>
+        </button>
+        <button class="hotspot hotspot--gift-copy-button" type="button" data-copy="lucia.351.curar.mp" data-copy-message="Alias copiado">
+          <span class="sr-only">Copiar alias</span>
+        </button>
+        <p class="modal-toast" aria-live="polite"></p>
+      </div>
+    </dialog>
+
+    <button
+      id="audioToggle"
+      class="audio-toggle"
+      type="button"
+      aria-label="Reproducir música"
+      aria-pressed="false"
+      hidden
+    >
+      <span class="audio-toggle__note" aria-hidden="true">♫</span>
+      <span class="audio-toggle__state" aria-hidden="true"></span>
+    </button>
+    <audio id="invitationAudio" src="assets/musica.m4a" loop preload="metadata"></audio>
+
+    <script src="script.js?v=20261103-4"></script>
+    <script src="assets/invitation-personalization.js?v=20261103-1"></script>
+  </body>
+</html>
